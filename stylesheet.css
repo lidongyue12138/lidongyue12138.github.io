@@ -1,4 +1,5 @@
 /* latin-ext */
+
 @font-face {
   font-family: 'Lato';
   font-style: italic;
@@ -128,4 +129,34 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+.foldable {
+  padding: 0;
+  margin: 0;
+  border: none; /* remove border */
+}
+
+/* .foldable p {
+  display: none;
+} */
+
+.foldable ul {
+  max-height: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.foldable ul.foldable-collapsed {
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  border: none; /* remove border */
+}
+
+.foldable-header:before {
+  content: "\25B8"; /* Unicode character for a right-pointing triangle */
+  display: inline-block;
+  margin-right: 5px;
+  transform: rotate(90deg); /* rotate the triangle to point downwards */
 }
